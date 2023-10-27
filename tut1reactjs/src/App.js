@@ -1,6 +1,11 @@
+import Book from "./book"
+
 function App() {
   return (
-    <h1>React Project</h1>
+    <>
+    
+    <Book />
+    </>
   );
 }
 
