@@ -1,10 +1,11 @@
 import Book from "./book";
 
 function App() {
+  const userName = 'Prashant Malviya :)'
   return (
     <>
-    <h1>Hi Prashant Here</h1>
     <Book />
+    <h1>Hi {userName}</h1>
     </>
   )
 }
