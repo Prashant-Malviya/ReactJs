@@ -1,4 +1,4 @@
-import { useState } from 'react'n
+import { useState } from 'react'
 import './App.css'
 
 function App() {
@@ -9,14 +9,34 @@ function App() {
   // let counter = 53;
   const addValue = ()=>{
     
-    counter += 1;
-    setCounter(counter)
-    if(counter >= 20) {
-      alert("sorry you can't move further");
-      document.getElementById("btn1").disabled = true;
-    }
+    // counter += 1;
+    // setCounter(counter)
+
+
+    // interview question =========---------->
+
+      // setCounter(counter+1);
+      // setCounter(counter+1);
+      // setCounter(counter+1);
+      // setCounter(counter+1);
+
+      // it will only increase by one because we know that diffing algorithm concept fibre github
+
+      // if we wanted to increase at the once and got the resultant output then we can do following
+
+      setCounter((prevCounter) => prevCounter+1); // set function accepts a callback function
+      setCounter(prevCounter => prevCounter+1);
+      setCounter(prevCounter => prevCounter+1);
+      setCounter(prevCounter => prevCounter+1);
+
+    // interview question ----------------
+
+    // if(counter >= 20) {
+    //   alert("sorry you can't move further");
+    //   document.getElementById("btn1").disabled = true;
+    // }
     
-    console.log('value added',counter)
+    // console.log('value added',counter)
   }
 
   const removeValue = ()=>{
