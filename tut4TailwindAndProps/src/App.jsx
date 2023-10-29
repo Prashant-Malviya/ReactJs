@@ -15,8 +15,8 @@ function App() {
   return (
     <>
       <h1 className='bg-green-400 text-black p-5 rounded-2xl mb-5'>Tailwind Test</h1>
-     <Card name ='prashant' someObj = {myObj} arr = {newArr}/>
-     <Card />
+     <Card name ='prashant' btnText="click me"/>
+     <Card name='krishna'/>
     </>
   )
 }
