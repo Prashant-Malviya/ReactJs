@@ -1,5 +1,5 @@
-import {useState} from "react";
-import FirstComponent from "./components/FirstComponent";
+import {useState,useRef} from "react";
+import FirstComponent from "./components/firstComponent";
 
 const App = () => {
 
@@ -15,14 +15,20 @@ const App = () => {
 
   // let x = 0;
 
-  const [x,setx] = useState(0);
+  // useState ---------------------
 
-  const btnClick = () =>{
-    console.log("clicked");
-    setx(x+1);
-    // console.log(x)
-  }
+  // const [x,setx] = useState(0);
 
+  // const btnClick = () =>{
+  //   console.log("clicked");
+  //   setx(x+1);
+  //   // console.log(x)
+  // }
+
+  // useRef ------------------------- it is a react hook using which we can take reference of any variable
+
+  const [data,setData] = useState([]);
+  const inputRef = useRef(null);
 
   return (
     <div>
@@ -36,10 +42,18 @@ const App = () => {
 
     {/* {x} */}
 
-    <button onClick={btnClick}>Click Me</button>
+    {/* <button onClick={btnClick}>Click Me</button> */}
     {/* below data is a props name and x is the value of the prop same we can pass function to it */}
     {/* <FirstComponent data={x} /> */}
-    <FirstComponent data={x} fn={setx} />
+    {/* <FirstComponent data={x} fn={setx} /> */}
+
+    {/* <input ref={inputRef} type="text"/>
+    <button onClick={()=>{console.log(inputRef.current.value)}}>Submit</button> */}
+
+
+    <input ref={inputRef} type="text"/>
+    <button onClick={()=>{setData([...data,inputRef.current.value])}}>Submit</button>
+    {data.map((item,index)=>{return <h1 key={index}>{item}</h1>})}
 
     </div>
   )
