@@ -1,15 +1,16 @@
-'use client'
-import React, { useState } from 'react'
-import Header from '@/components/header'
+import React from 'react'
+import Link from 'next/link'
 
 const page = () => {
-  const [user, setuser] = useState("Prashant")
   return (
-    <div> 
-    <Header user={user}/>
-    
+    <div>
+      <h1>This is Home Page</h1>
+      <Link href="/About">About</Link>
+      <Link href="/Contact">Contact</Link>
+      <Link href="/Product">Prodcut</Link>
     </div>
   )
 }
 
 export default page
+  
